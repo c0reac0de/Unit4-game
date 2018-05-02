@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8"></meta>
+    <title>Crystal Collector</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="game" type="text/javscript" href="assets/javascript/game.js">
+ </head>
+
+<body>
+  <!-- crystal collector header-->
+<!-- crystal user instructions-->
+    <div class="jumbotron">
+        <h1 class="display-4">The Crystal Collector!</h1>
+        <hr class="my-4">
+        <p>You will be given a random number at the start of the game.There are four crystals below.</p>
+        <p>By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <hr class="my-4">
+        <p>You win the game by matching your total score to the random number displayed. </p>
+        <p>If your total score goes above the randon number you lose that session.</p>
+        <hr class="my-4">
+        <p>Each time the game starts, the game will change the values of each crystal.</p>
+        <br>
+        <p>Click on an image below to begin!</p>
+<!-- 4 crystals to click-->
+<p class="crystals">
+    <img src="assets/images/amythest.jpg" alt="amythest" width="200"height="200">
+    <p class="crystals">
+        <img src="assets/images/snowkrystal.jpg" alt="amythest" width="200"height="200">
+      </p>
+      <p class="crystals">
+          <img src="assets/images/quartz.jpg" alt="amythest" width="200"height="200">
+        </p>
+        <p class="crystals">
+            <img src="assets/images/agate.jpg" alt="amythest" width="200"height="200">
+          </p>
+  </p>
+
+
+        <!-- Text form displays number to match -->
+
+<div id="compGuess" ></div>
+
+<!-- aside box of wins and losses-->
+<div class="form-group">
+    <label for="wins">Wins:</label>
+    <input type="text" class="form-control" id="wins">
+    <label for="losses">Losses:</label>
+    <input type="text" class="form-control" id="losses">
+  </div>
+
+
+      
+<!--added sum of clicks "your total score is"-->
+<!-- display score-->
+<form>
+    <div class="form-group">
+      <label for="Total Score is:">Your total score is:</label>
+      <input type="text" class="form-control" id="ScoreDisplay" placeholder="Score Display">
+    </div>
+  </form>
+</div>
+      <!--ends html layout-->
+
+
+
+</body>
+</html>
+
+
+
