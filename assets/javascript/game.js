@@ -4,12 +4,15 @@
 //assign random value
 //connect and display random value to compGuess div
 $(document).ready(function(){
-    $(".jumbotron").on("click","#compGuess",function(){
         var randomNum="";
-        var random=Math.floor(Math.random()*100)+1;
-        randomNum=random+randomNum;
-        $("#compGuess").innerHTML(randomNum);
-    });
+        for(var i=0; i<4;i++){
+            var random=Math.floor(Math.random()*5)+1;
+            randomNum=random + randomNum;
+            $('compGuess').ready(randomNum);
+            console.log(randomNum);
+        }
+       
+   
 
 
 //<!-- connect crystal img with on clicks-->
@@ -19,19 +22,12 @@ $(document).ready(function(){
 //reset variable values with win/lose
 
 
-$(".jumbotron").keyup("click","#crystals", function(){
-    var crystalValue="";
-    var randomCtlVal=Math.floor(Math.random)(0>9)+1;
-    crystalValue=randomCtlVal+crystalValue;
-    console.log(crystalValue);
-});
-
-
-
-
-
-
-
+//$(".jumbotron").keyup("click",'crystals', function(){
+  //  var crystalValue="";
+    //var randomCtlVal=Math.floor(Math.random)+1;
+    //crystalValue=randomCtlVal+crystalValue;
+    //console.log(crystalValue);
+//});
 
 
 //<!-- connect total score with crystal clicks AND function adder-->

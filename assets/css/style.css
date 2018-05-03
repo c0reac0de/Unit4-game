@@ -1,3 +1,16 @@
+html
+
+body
+
+#compGuess
+
+#form-group{
+    wins:
+    losses:
+    total score is:
+}
+
 .crystals{
     float:left;
 }
+
