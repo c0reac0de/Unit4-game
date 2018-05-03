@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8"></meta>
     <title>Crystal Collector</title>
+  <!-- crystal collector links-->
+ <!--global JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <!-- css-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="game" type="text/javscript" href="assets/javascript/game.js">
+     <!-- local Javascript/jquery -->
+    <script src="assets/javascript/game.js"></script>
  </head>
 
 <body>
-  <!-- crystal collector header-->
 <!-- crystal user instructions-->
     <div class="jumbotron">
         <h1 class="display-4">The Crystal Collector!</h1>
@@ -24,33 +28,39 @@
         <p>Each time the game starts, the game will change the values of each crystal.</p>
         <br>
         <p>Click on an image below to begin!</p>
+      <!--place both computer guess and score tally in equi length bootstrap grid (md-6)-->
+        
+      <!-- Text form displays number to match -->
+<hr>
+      <div id="compGuess"></div>
+
+      <!-- aside box of wins and losses-->
+      <div class="form-group">
+          <label for="wins">Wins:</label>
+          <input type="text" class="form-control" id="wins">
+          <label for="losses">Losses:</label>
+          <input type="text" class="form-control" id="losses">
+        </div>
+      
+
+
+
 <!-- 4 crystals to click-->
-<p class="crystals">
+<p class="crystals" id="crystal1">
     <img src="assets/images/amythest.jpg" alt="amythest" width="200"height="200">
-    <p class="crystals">
+    <p class="crystals"id="crystal2">
         <img src="assets/images/snowkrystal.jpg" alt="amythest" width="200"height="200">
       </p>
-      <p class="crystals">
+      <p class="crystals"id="crystal3">
           <img src="assets/images/quartz.jpg" alt="amythest" width="200"height="200">
         </p>
-        <p class="crystals">
+        <p class="crystals"id="crystal4">
             <img src="assets/images/agate.jpg" alt="amythest" width="200"height="200">
           </p>
   </p>
 
 
-        <!-- Text form displays number to match -->
-
-<div id="compGuess" ></div>
-
-<!-- aside box of wins and losses-->
-<div class="form-group">
-    <label for="wins">Wins:</label>
-    <input type="text" class="form-control" id="wins">
-    <label for="losses">Losses:</label>
-    <input type="text" class="form-control" id="losses">
-  </div>
-
+  
 
       
 <!--added sum of clicks "your total score is"-->
