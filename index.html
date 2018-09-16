@@ -1,83 +1,55 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8"></meta>
-    <title>Crystal Collector</title>
+
+<head>
+  <meta charset="UTF-8"></meta>
+  <title>Crystal Collector</title>
   <!-- crystal collector links-->
- <!--global JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-     <!-- css-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-     <!-- local Javascript/jquery -->
-    <script src="assets/javascript/game.js"></script>
- </head>
+  <!--global JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- css-->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- local Javascript/jquery -->
+  <script src="assets/javascript/game.js"></script>
+</head>
 
 <body>
-<!-- crystal user instructions-->
-    <div class="jumbotron">
-        <h1 class="display-4">The Crystal Collector!</h1>
-        <hr class="my-4">
-        <p>You will be given a random number at the start of the game.There are four crystals below.</p>
-        <p>By clicking on a crystal you will add a specific amount of points to your total score.</p>
-        <hr class="my-4">
-        <p>You win the game by matching your total score to the random number displayed. </p>
-        <p>If your total score goes above the randon number you lose that session.</p>
-        <hr class="my-4">
-        <p>Each time the game starts, the game will change the values of each crystal.</p>
-        <br>
-        <p>Click on an image below to begin!</p>
-      <!--place both computer guess and score tally in equi length bootstrap grid (md-6)-->
-        
-      <!-- Text form displays number to match -->
-<hr>
-      <div id="compGuess"></div>
-
-      <!-- aside box of wins and losses-->
-      <div class="form-group">
-          <label for="wins">Wins:</label>
-          <input type="text" class="form-control" id="wins">
-          <label for="losses">Losses:</label>
-          <input type="text" class="form-control" id="losses">
-        </div>
-      
-
-
-
-<!-- 4 crystals to click-->
-<p class="crystals" id="crystal1">
-    <img src="assets/images/amythest.jpg" alt="amythest" width="200"height="200">
-    <p class="crystals"id="crystal2">
-        <img src="assets/images/snowkrystal.jpg" alt="amythest" width="200"height="200">
-      </p>
-      <p class="crystals"id="crystal3">
-          <img src="assets/images/quartz.jpg" alt="amythest" width="200"height="200">
-        </p>
-        <p class="crystals"id="crystal4">
-            <img src="assets/images/agate.jpg" alt="amythest" width="200"height="200">
-          </p>
-  </p>
-
-
-  
-
-      
-<!--added sum of clicks "your total score is"-->
-<!-- display score-->
-<form>
-    <div class="form-group">
-      <label for="Total Score is:">Your total score is:</label>
-      <input type="text" class="form-control" id="ScoreDisplay" placeholder="Score Display">
-    </div>
-  </form>
-</div>
+  <!-- crystal user instructions-->
+  <div class="jumbotron">
+    <h1 class="display-4">The Crystal Collector!</h1>
+    <hr class="my-4">
+    <p>You will be given a random number at the start of the game.There are four crystals below.
+    By clicking on a crystal you will add a specific amount of points to your total score.
+    If your total score goes above this you lose that session.
+      Each time the game starts, the game will change the values of each crystal.</p>
     
+  <div>
+    <h2> Match your score to this:</h2><div id="compGuess"></div><br>
+    <h2> Your score so far:</h2><div id="ScoreDisplay"></div><br>
+   <div id="wins"></div> <h2>Wins</h2> <br>
+   <div id="losses"></div><h2>Losses</h2>
+  </div>
 
+  </div>
+    <p>~*Click on an image below to begin the game*~</p>
+
+
+
+    <!-- 4 crystals to click-->
+    <div class="crystals">
+      <img src="assets/images/amythest.jpg" class="crystal A" alt="amythest" width="200" height="200">
+      <img src="assets/images/snowkrystal.jpg" class="crystal B" alt="snowy" width="200" height="200">
+      <img src="assets/images/quartz.jpg" class="crystal C" alt="quartz" width="200" height="200">
+      <img src="assets/images/agate.jpg" class="crystal D" alt="agate" width="200" height="200">
+    </div>
+  </div>
 
 
 </body>
+
 </html>
 
 
-  <!--ends html layout-->
+<!--ends html layout-->

@@ -1,37 +1,49 @@
-//Responsive Java-->
-//<!-- display computer random value in box-->
-//create empty div/variable
-//assign random value
-//connect and display random value to compGuess div
+
+
 $(document).ready(function(){
-        var randomNum="";
-        for(var i=0; i<4;i++){
-            var random=Math.floor(Math.random()*5)+1;
-            randomNum=random + randomNum;
-            $('compGuess').ready(randomNum);
-            console.log(randomNum);
-        }
-       
-   
 
+//set inital values
+var makeRn="";
+var playerTotal=0;
+var wins=0;
+var losses=0;
 
-//<!-- connect crystal img with on clicks-->
-//create crystal variable
-//assign variable a random value between 1-9
-//connect crytal variable to crystal images
-//reset variable values with win/lose
+//RGN with min max param
+function randomInt(min, max){
+    return Math.floor(Math.random()* (max-min+1)+min);
+}
 
+//game settings
+function initGame(){
+makeRn=randomInt(19,120);
+playerTotal=0;
+var crystal=[$('.A'),$('.B'),$('.C'),$('.D')];
+for (var i=0; i<crystal.length; i++){
+    crystal[i].attr('data-imageValue', randomInt(1,12));
+};
 
-//$(".jumbotron").keyup("click",'crystals', function(){
-  //  var crystalValue="";
-    //var randomCtlVal=Math.floor(Math.random)+1;
-    //crystalValue=randomCtlVal+crystalValue;
-    //console.log(crystalValue);
-//});
+$('#compGuess').html(makeRn);
+$('#wins').html(wins);
+$('#losses').html(losses);
+$('#ScoreDisplay').html(playerTotal);
+}
+initGame();
 
-
-//<!-- connect total score with crystal clicks AND function adder-->
-//<!-- connect crystal value box with crystal clicks-->
-
-
+//game functions
+//on click listener/function 
+$('.crystal').on('click',function(){
+    playerTotal += parseInt($(this).attr('data-imageValue'));
+    
+    $('#ScoreDisplay').html(playerTotal);
+    if (playerTotal === makeRn){
+        wins++;
+        alert('you won this set! The next one starts now;');
+        initGame();
+    }
+    else if(playerTotal> makeRn){
+        losses++;
+        alert('you lost this one but have another go')
+        initGame();
+    }
+});
 });

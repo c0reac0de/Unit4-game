@@ -1,16 +1,23 @@
-html
-
-body
-
-#compGuess
-
-#form-group{
-    wins:
-    losses:
-    total score is:
-}
-
 .crystals{
     float:left;
+}
+
+#compGuess{
+    float:right;
+    border: 2px solid black;
+}
+
+#ScoreDisplay{
+    float:right;
+    border: 2px solid green;  
+}
+
+#wins, #losses{
+    float:right;
+    border: 2px solid purple; 
+}
+
+h2{
+    display: inline-table;
 }
 
